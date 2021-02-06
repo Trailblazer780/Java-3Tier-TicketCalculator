@@ -1,9 +1,9 @@
 
 public class GenerateReport {
 	
-	private static int seatATotal;
-	private static int seatBTotal;
-	private static int seatCTotal;
+	private static double seatATotal;
+	private static double seatBTotal;
+	private static double seatCTotal;
 	
 	
 	public static String generateReport() {
@@ -16,15 +16,15 @@ public class GenerateReport {
 		String line6 = "";
 		//System.out.println(output);
 		
-		String format = "%1$-1s %2$-13s $%3$-4s $%4$-7s";
+		String format = "%1$-1s %2$-12s $%3$-6.2f $%4$-1.2f";
 		
 		calculate();
-		line1 = String.format("%19s %6s %5s", "Tickets Sold", "Price", "Total");
-		line2 = String.format("%19s %6s %5s", "------------", "-----", "-----");
+		line1 = String.format("%19s %5s %7s", "Tickets Sold", "Price", "Total");
+		line2 = String.format("%19s %5s %7s", "------------", "-----", "-----");
 		line3 = String.format(format, "Seat A", Seat.getSeatACount(), Seat.getSeatACost(), seatATotal);
 		line4 = String.format(format, "Seat B", Seat.getSeatBCount(), Seat.getSeatBCost(), seatBTotal);
 		line5 = String.format(format, "Seat C", Seat.getSeatCCount(), Seat.getSeatCCost(), seatCTotal);
-		line6 = String.format("%s $ %-1s", "Total Sales:", seatATotal+seatBTotal+seatCTotal);
+		line6 = String.format("%s $ %-1.2f", "Total Sales:", seatATotal+seatBTotal+seatCTotal);
 		
 		
 		

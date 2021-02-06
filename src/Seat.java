@@ -2,11 +2,11 @@
 public class Seat {
 	
 	private static int seatACount;
-	private static int seatACost;
+	private static double seatACost;
 	private static int seatBCount;
-	private static int seatBCost;
+	private static double seatBCost;
 	private static int seatCCount;
-	private static int seatCCost;
+	private static double seatCCost;
 	
 	
 	// ---- Get & Set methods ---- //
@@ -26,17 +26,17 @@ public class Seat {
 		//System.out.println("There are: " + seatCCount + " Seat C tickets sold");
 	}
 	// Set Seat Cost A 
-	public static void setSeatACost(int count) {
+	public static void setSeatACost(double count) {
 		seatACost = count;
 		//System.out.println("The cost of a Seat A Ticket is: $" + seatACost);
 	}
 	// Set Seat Cost B
-	public static void setSeatBCost(int count) {
+	public static void setSeatBCost(double count) {
 		seatBCost = count;
 		//System.out.println("The cost of a Seat A Ticket is: $" + seatBCost);
 	}
 	// Set Seat Cost C
-	public static void setSeatCCost(int count) {
+	public static void setSeatCCost(double count) {
 		seatCCost = count;
 		//System.out.println("The cost of a Seat A Ticket is: $" + seatCCost);
 	}
@@ -54,15 +54,15 @@ public class Seat {
 		return seatCCount;
 	}
 	// Get Seat Cost A
-	public static int getSeatACost() {
+	public static double getSeatACost() {
 		return seatACost;
 	}
 	// Get Seat Cost B
-	public static int getSeatBCost() {
+	public static double getSeatBCost() {
 		return seatBCost;
 	}
 	// Get Seat Cost C
-	public static int getSeatCCost() {
+	public static double getSeatCCost() {
 		return seatCCost;
 	}
 
