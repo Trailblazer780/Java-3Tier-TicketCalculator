@@ -15,13 +15,16 @@ public class GenerateReport {
 		String line5 = "";
 		String line6 = "";
 		//System.out.println(output);
+		
+		String format = "%1$-1s %2$-13s $%3$-4s $%4$-7s";
+		
 		calculate();
 		line1 = String.format("%19s %6s %5s", "Tickets Sold", "Price", "Total");
 		line2 = String.format("%19s %6s %5s", "------------", "-----", "-----");
-		line3 = String.format("%s %-1s %13s %6s", "Seat A", Seat.getSeatACount(), Seat.getSeatACost(), seatATotal);
-		line4 = String.format("%s %-1s %13s %6s", "Seat A", Seat.getSeatBCount(), Seat.getSeatBCost(), seatBTotal);
-		line5 = String.format("%s %-1s %13s %6s", "Seat A", Seat.getSeatCCount(), Seat.getSeatCCost(), seatCTotal);
-		line6 = String.format("%s %-1s", "Total Sales:", seatATotal+seatBTotal+seatCTotal);
+		line3 = String.format(format, "Seat A", Seat.getSeatACount(), Seat.getSeatACost(), seatATotal);
+		line4 = String.format(format, "Seat B", Seat.getSeatBCount(), Seat.getSeatBCost(), seatBTotal);
+		line5 = String.format(format, "Seat C", Seat.getSeatCCount(), Seat.getSeatCCost(), seatCTotal);
+		line6 = String.format("%s $ %-1s", "Total Sales:", seatATotal+seatBTotal+seatCTotal);
 		
 		
 		
