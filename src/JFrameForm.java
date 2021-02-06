@@ -13,7 +13,7 @@ public class JFrameForm extends JFrame implements ActionListener{
 	 // JButtons
 	 private JButton btnReport;
 	 private JButton btnReset;	 
-	 private JTextArea txtOutput;
+	 private static JTextArea txtOutput;
 	 
 	 private JTextField countA;
 	 private JTextField countB;
@@ -92,15 +92,15 @@ public class JFrameForm extends JFrame implements ActionListener{
 	        // Output Panel
 	        JPanel outputPanel = new JPanel();
 	        outputPanel.setBorder(BorderFactory.createTitledBorder("Report"));
-	        txtOutput = new JTextArea();
-	        txtOutput.setColumns(38);
-	        txtOutput.setRows(10);
-	        txtOutput.setFont(new Font("Courier", Font.BOLD, 14));
-	        txtOutput.setLineWrap(true);
-	        txtOutput.setWrapStyleWord(true);
-	        txtOutput.setEditable(false);
-	        txtOutput.setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
-	        outputPanel.add(txtOutput);
+	        setTxtOutput(new JTextArea());
+	        getTxtOutput().setColumns(38);
+	        getTxtOutput().setRows(10);
+	        getTxtOutput().setFont(new Font("Courier", Font.BOLD, 14));
+	        getTxtOutput().setLineWrap(true);
+	        getTxtOutput().setWrapStyleWord(true);
+	        getTxtOutput().setEditable(false);
+	        getTxtOutput().setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
+	        outputPanel.add(getTxtOutput());
 	        contentPanel.add(outputPanel);
 	        
 	        // Buttons Panel
@@ -136,9 +136,18 @@ public class JFrameForm extends JFrame implements ActionListener{
 			 Seat.setSeatBCost(sCostB);
 			 int sCostC = Integer.parseInt(priceC.getText());
 			 Seat.setSeatCCost(sCostC);
-			 
 			 GenerateReport.generateReport();
 			 
 		 }
 	 }
+
+
+	public static JTextArea getTxtOutput() {
+		return txtOutput;
+	}
+
+
+	public void setTxtOutput(JTextArea txtOutput) {
+		this.txtOutput = txtOutput;
+	}
 }
