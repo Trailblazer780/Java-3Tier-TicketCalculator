@@ -133,9 +133,11 @@ public class JFrameForm extends JFrame implements ActionListener{
 			 Seat.setSeatACost(sCostA);
 			 // Seat B Cost
 			 int sCostB = Integer.parseInt(priceB.getText());
-			 Seat.setSeatACost(sCostB);
+			 Seat.setSeatBCost(sCostB);
 			 int sCostC = Integer.parseInt(priceC.getText());
-			 Seat.setSeatACost(sCostC);
+			 Seat.setSeatCCost(sCostC);
+			 
+			 GenerateReport.generateReport();
 			 
 		 }
 	 }

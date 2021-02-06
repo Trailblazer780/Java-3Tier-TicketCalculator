@@ -6,7 +6,6 @@ public class Main {
 		JFrameForm jframeForm;
         jframeForm = new JFrameForm();
         jframeForm.setVisible(true);
-
 	}
 
 }

@@ -42,27 +42,27 @@ public class Seat {
 	}
 	
 	// Get Seat Count A
-	public int getSeatACount() {
+	public static int getSeatACount() {
 		return seatACount;
 	}
 	// Get Seat Count B
-	public int getSeatBCount() {
+	public static int getSeatBCount() {
 		return seatBCount;
 	}
 	// Get Seat Count C
-	public int getSeatCCount() {
+	public static int getSeatCCount() {
 		return seatCCount;
 	}
 	// Get Seat Cost A
-	public int getSeatACost() {
+	public static int getSeatACost() {
 		return seatACost;
 	}
 	// Get Seat Cost B
-	public int getSeatBCost() {
+	public static int getSeatBCost() {
 		return seatBCost;
 	}
 	// Get Seat Cost C
-	public int getSeatCCost() {
+	public static int getSeatCCost() {
 		return seatCCost;
 	}
 
