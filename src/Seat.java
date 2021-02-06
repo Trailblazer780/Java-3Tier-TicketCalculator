@@ -2,11 +2,11 @@
 public class Seat {
 	
 	private static int seatACount;
-	private int seatACost;
+	private static int seatACost;
 	private static int seatBCount;
-	private int seatBCost;
+	private static int seatBCost;
 	private static int seatCCount;
-	private int seatCCost;
+	private static int seatCCost;
 	
 	
 	// ---- Get & Set methods ---- //
@@ -25,7 +25,16 @@ public class Seat {
 		seatCCount = count;
 		System.out.println("There are: " + seatCCount + " Seat C tickets sold");
 	}
-
-	
-	
+	public static void setSeatACost(int count) {
+		seatACost = count;
+		System.out.println("The cost of a Seat A Ticket is: $" + seatACost);
+	}
+	public static void setSeatBCost(int count) {
+		seatBCost = count;
+		System.out.println("The cost of a Seat A Ticket is: $" + seatBCost);
+	}
+	public static void setSeatCCost(int count) {
+		seatCCost = count;
+		System.out.println("The cost of a Seat A Ticket is: $" + seatCCost);
+	}
 }
