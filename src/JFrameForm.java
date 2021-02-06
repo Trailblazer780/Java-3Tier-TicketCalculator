@@ -118,6 +118,17 @@ public class JFrameForm extends JFrame implements ActionListener{
 	 
 	 
 	 public void actionPerformed(ActionEvent event) {
-		 
+		 if (event.getSource() == btnReport) {
+			 // Seat A count 
+			 int sCountA = Integer.parseInt(countA.getText());
+			 Seat.setSeatACount(sCountA);
+			 // Seat B Count
+			 int sCountB = Integer.parseInt(countB.getText());
+			 Seat.setSeatBCount(sCountB);
+			 // Seat C Count 
+			 int sCountC = Integer.parseInt(countC.getText());
+			 Seat.setSeatCCount(sCountC);
+			 
+		 }
 	 }
 }
