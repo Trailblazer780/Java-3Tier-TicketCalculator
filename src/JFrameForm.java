@@ -15,12 +15,12 @@ public class JFrameForm extends JFrame implements ActionListener{
 	 private JButton btnReset;	 
 	 private static JTextArea txtOutput;
 	 
-	 private JTextField countA;
-	 private JTextField countB;
-	 private JTextField countC;
-	 private JTextField priceA;
-	 private JTextField priceB;
-	 private JTextField priceC;
+	 private static JTextField countA;
+	 private static JTextField countB;
+	 private static JTextField countC;
+	 private static JTextField priceA;
+	 private static JTextField priceB;
+	 private static JTextField priceC;
 	 private JLabel lblblank;
 	 private JLabel lblcount;
 	 private JLabel lblprice;
@@ -139,7 +139,20 @@ public class JFrameForm extends JFrame implements ActionListener{
 			 GenerateReport.generateReport();
 			 
 		 }
+		 if (event.getSource() == btnReset) {
+			 clearFields();
+		 }
 	 }
+	 
+	public static void clearFields() {
+		countA.setText("");
+		countB.setText("");
+		countC.setText("");
+		priceA.setText("");
+		priceB.setText("");
+		priceC.setText("");
+		txtOutput.setText("");
+	}
 
 
 	public static JTextArea getTxtOutput() {
